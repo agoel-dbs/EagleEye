@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInvoice));
             this.pnlInvoice = new System.Windows.Forms.Panel();
+            this.tpInvoiceInfo = new System.Windows.Forms.TableLayoutPanel();
+            this.lblSellerAdd3 = new System.Windows.Forms.Label();
+            this.lblSellerAdd2 = new System.Windows.Forms.Label();
+            this.lblSellerAdd1 = new System.Windows.Forms.Label();
+            this.lblSellerGSTNo = new System.Windows.Forms.Label();
+            this.lblSellerName = new System.Windows.Forms.Label();
             this.tplOtherInfo = new System.Windows.Forms.TableLayoutPanel();
             this.lblSellerSign = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,47 +66,130 @@
             this.lblInvQty = new System.Windows.Forms.Label();
             this.lblInvAmt = new System.Windows.Forms.Label();
             this.tplBuyerInfo = new System.Windows.Forms.TableLayoutPanel();
-            this.lblSellerName = new System.Windows.Forms.Label();
-            this.lblSellerAdd1 = new System.Windows.Forms.Label();
-            this.lblSellerAdd2 = new System.Windows.Forms.Label();
-            this.lblSellerAdd3 = new System.Windows.Forms.Label();
-            this.lblBuyer = new System.Windows.Forms.Label();
-            this.lblBuyerAdd1 = new System.Windows.Forms.Label();
             this.lblBuyerGSTIN = new System.Windows.Forms.Label();
-            this.lblSellerGSTNo = new System.Windows.Forms.Label();
-            this.tpInvoiceInfo = new System.Windows.Forms.TableLayoutPanel();
-            this.lblInvoiceHeader = new System.Windows.Forms.Label();
-            this.lblInvoiceNo = new System.Windows.Forms.Label();
-            this.lblInvoiceNoValue = new System.Windows.Forms.Label();
-            this.lblInvDate = new System.Windows.Forms.Label();
-            this.lblInvTime = new System.Windows.Forms.Label();
-            this.lblInvDateVal = new System.Windows.Forms.Label();
-            this.lblTruckNo = new System.Windows.Forms.Label();
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.lblRavannaNo = new System.Windows.Forms.Label();
+            this.lblBuyerName = new System.Windows.Forms.Label();
+            this.lblBuyerAdd1 = new System.Windows.Forms.Label();
+            this.lblBuyerAdd2 = new System.Windows.Forms.Label();
+            this.lblBuyerAdd3 = new System.Windows.Forms.Label();
             this.printInvoiceDoc = new System.Drawing.Printing.PrintDocument();
             this.printInvoicePreview = new System.Windows.Forms.PrintPreviewDialog();
             this.btnPrintInv = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblInvoiceNoValue = new System.Windows.Forms.Label();
+            this.lblInvDateVal = new System.Windows.Forms.Label();
+            this.lblTruckNo = new System.Windows.Forms.Label();
+            this.lblShiptoName = new System.Windows.Forms.Label();
+            this.lblShiptoAdd1 = new System.Windows.Forms.Label();
+            this.lblShiptoAdd2 = new System.Windows.Forms.Label();
+            this.lblShiptoAdd3 = new System.Windows.Forms.Label();
+            this.lblShiptoGSTIN = new System.Windows.Forms.Label();
             this.pnlInvoice.SuspendLayout();
+            this.tpInvoiceInfo.SuspendLayout();
             this.tplOtherInfo.SuspendLayout();
             this.tplTaxInfo.SuspendLayout();
             this.tplMaterialInfo.SuspendLayout();
             this.tplBuyerInfo.SuspendLayout();
-            this.tpInvoiceInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlInvoice
             // 
+            this.pnlInvoice.Controls.Add(this.panel1);
+            this.pnlInvoice.Controls.Add(this.tpInvoiceInfo);
             this.pnlInvoice.Controls.Add(this.tplOtherInfo);
             this.pnlInvoice.Controls.Add(this.tplTaxInfo);
             this.pnlInvoice.Controls.Add(this.tplMaterialInfo);
             this.pnlInvoice.Controls.Add(this.tplBuyerInfo);
-            this.pnlInvoice.Controls.Add(this.tpInvoiceInfo);
-            this.pnlInvoice.Location = new System.Drawing.Point(15, 28);
+            this.pnlInvoice.Location = new System.Drawing.Point(10, 18);
+            this.pnlInvoice.Margin = new System.Windows.Forms.Padding(2);
             this.pnlInvoice.Name = "pnlInvoice";
-            this.pnlInvoice.Size = new System.Drawing.Size(677, 844);
+            this.pnlInvoice.Size = new System.Drawing.Size(451, 549);
             this.pnlInvoice.TabIndex = 0;
+            // 
+            // tpInvoiceInfo
+            // 
+            this.tpInvoiceInfo.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tpInvoiceInfo.ColumnCount = 2;
+            this.tpInvoiceInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tpInvoiceInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tpInvoiceInfo.Controls.Add(this.lblSellerAdd3, 0, 3);
+            this.tpInvoiceInfo.Controls.Add(this.lblSellerAdd2, 0, 2);
+            this.tpInvoiceInfo.Controls.Add(this.lblSellerAdd1, 0, 1);
+            this.tpInvoiceInfo.Controls.Add(this.lblSellerGSTNo, 0, 4);
+            this.tpInvoiceInfo.Controls.Add(this.lblSellerName, 0, 0);
+            this.tpInvoiceInfo.Controls.Add(this.lblInvoiceNoValue, 1, 0);
+            this.tpInvoiceInfo.Controls.Add(this.lblInvDateVal, 1, 2);
+            this.tpInvoiceInfo.Controls.Add(this.lblTruckNo, 1, 4);
+            this.tpInvoiceInfo.Location = new System.Drawing.Point(1, 31);
+            this.tpInvoiceInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.tpInvoiceInfo.Name = "tpInvoiceInfo";
+            this.tpInvoiceInfo.RowCount = 5;
+            this.tpInvoiceInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tpInvoiceInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tpInvoiceInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tpInvoiceInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tpInvoiceInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tpInvoiceInfo.Size = new System.Drawing.Size(447, 98);
+            this.tpInvoiceInfo.TabIndex = 6;
+            // 
+            // lblSellerAdd3
+            // 
+            this.lblSellerAdd3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblSellerAdd3.AutoSize = true;
+            this.lblSellerAdd3.Location = new System.Drawing.Point(3, 60);
+            this.lblSellerAdd3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSellerAdd3.Name = "lblSellerAdd3";
+            this.lblSellerAdd3.Size = new System.Drawing.Size(32, 13);
+            this.lblSellerAdd3.TabIndex = 3;
+            this.lblSellerAdd3.Text = "Add3";
+            // 
+            // lblSellerAdd2
+            // 
+            this.lblSellerAdd2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblSellerAdd2.AutoSize = true;
+            this.lblSellerAdd2.Location = new System.Drawing.Point(3, 41);
+            this.lblSellerAdd2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSellerAdd2.Name = "lblSellerAdd2";
+            this.lblSellerAdd2.Size = new System.Drawing.Size(32, 13);
+            this.lblSellerAdd2.TabIndex = 2;
+            this.lblSellerAdd2.Text = "Add2";
+            // 
+            // lblSellerAdd1
+            // 
+            this.lblSellerAdd1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblSellerAdd1.AutoSize = true;
+            this.lblSellerAdd1.Location = new System.Drawing.Point(3, 22);
+            this.lblSellerAdd1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSellerAdd1.Name = "lblSellerAdd1";
+            this.lblSellerAdd1.Size = new System.Drawing.Size(32, 13);
+            this.lblSellerAdd1.TabIndex = 1;
+            this.lblSellerAdd1.Text = "Add1";
+            // 
+            // lblSellerGSTNo
+            // 
+            this.lblSellerGSTNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblSellerGSTNo.AutoSize = true;
+            this.lblSellerGSTNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSellerGSTNo.Location = new System.Drawing.Point(3, 78);
+            this.lblSellerGSTNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSellerGSTNo.Name = "lblSellerGSTNo";
+            this.lblSellerGSTNo.Size = new System.Drawing.Size(41, 17);
+            this.lblSellerGSTNo.TabIndex = 9;
+            this.lblSellerGSTNo.Text = "GSTIN:";
+            this.lblSellerGSTNo.UseCompatibleTextRendering = true;
+            // 
+            // lblSellerName
+            // 
+            this.lblSellerName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblSellerName.AutoSize = true;
+            this.lblSellerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSellerName.Location = new System.Drawing.Point(3, 3);
+            this.lblSellerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSellerName.Name = "lblSellerName";
+            this.lblSellerName.Size = new System.Drawing.Size(71, 13);
+            this.lblSellerName.TabIndex = 0;
+            this.lblSellerName.Text = "SellerName";
             // 
             // tplOtherInfo
             // 
@@ -111,13 +200,14 @@
             this.tplOtherInfo.Controls.Add(this.lblSellerSign, 1, 0);
             this.tplOtherInfo.Controls.Add(this.label5, 0, 1);
             this.tplOtherInfo.Controls.Add(this.lblInstruction, 0, 2);
-            this.tplOtherInfo.Location = new System.Drawing.Point(3, 743);
+            this.tplOtherInfo.Location = new System.Drawing.Point(2, 483);
+            this.tplOtherInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tplOtherInfo.Name = "tplOtherInfo";
             this.tplOtherInfo.RowCount = 3;
             this.tplOtherInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tplOtherInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tplOtherInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tplOtherInfo.Size = new System.Drawing.Size(671, 93);
+            this.tplOtherInfo.Size = new System.Drawing.Size(447, 60);
             this.tplOtherInfo.TabIndex = 4;
             // 
             // lblSellerSign
@@ -125,9 +215,10 @@
             this.lblSellerSign.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSellerSign.AutoSize = true;
             this.lblSellerSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSellerSign.Location = new System.Drawing.Point(443, 2);
+            this.lblSellerSign.Location = new System.Drawing.Point(292, 2);
+            this.lblSellerSign.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSellerSign.Name = "lblSellerSign";
-            this.lblSellerSign.Size = new System.Drawing.Size(119, 25);
+            this.lblSellerSign.Size = new System.Drawing.Size(85, 17);
             this.lblSellerSign.TabIndex = 1;
             this.lblSellerSign.Text = "Seller Name";
             // 
@@ -135,9 +226,10 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 40);
+            this.label5.Location = new System.Drawing.Point(4, 25);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 20);
+            this.label5.Size = new System.Drawing.Size(105, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "Receiver\'s Signature";
             // 
@@ -147,9 +239,10 @@
             this.lblInstruction.AutoSize = true;
             this.tplOtherInfo.SetColumnSpan(this.lblInstruction, 2);
             this.lblInstruction.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstruction.Location = new System.Drawing.Point(265, 68);
+            this.lblInstruction.Location = new System.Drawing.Point(171, 42);
+            this.lblInstruction.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInstruction.Name = "lblInstruction";
-            this.lblInstruction.Size = new System.Drawing.Size(141, 17);
+            this.lblInstruction.Size = new System.Drawing.Size(105, 13);
             this.lblInstruction.TabIndex = 3;
             this.lblInstruction.Text = "Computer Generated";
             // 
@@ -175,7 +268,8 @@
             this.tplTaxInfo.Controls.Add(this.lblSGSTAmt, 2, 2);
             this.tplTaxInfo.Controls.Add(this.lblIGSTAmt, 2, 3);
             this.tplTaxInfo.Controls.Add(this.lblTotalAmt, 2, 4);
-            this.tplTaxInfo.Location = new System.Drawing.Point(3, 533);
+            this.tplTaxInfo.Location = new System.Drawing.Point(2, 346);
+            this.tplTaxInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tplTaxInfo.Name = "tplTaxInfo";
             this.tplTaxInfo.RowCount = 5;
             this.tplTaxInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -183,15 +277,16 @@
             this.tplTaxInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tplTaxInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tplTaxInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tplTaxInfo.Size = new System.Drawing.Size(671, 208);
+            this.tplTaxInfo.Size = new System.Drawing.Size(447, 135);
             this.tplTaxInfo.TabIndex = 3;
             // 
             // lblTotalAmtWord
             // 
             this.lblTotalAmtWord.AutoSize = true;
-            this.lblTotalAmtWord.Location = new System.Drawing.Point(4, 1);
+            this.lblTotalAmtWord.Location = new System.Drawing.Point(3, 1);
+            this.lblTotalAmtWord.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalAmtWord.Name = "lblTotalAmtWord";
-            this.lblTotalAmtWord.Size = new System.Drawing.Size(105, 20);
+            this.lblTotalAmtWord.Size = new System.Drawing.Size(70, 13);
             this.lblTotalAmtWord.TabIndex = 0;
             this.lblTotalAmtWord.Text = "Amount in Rs";
             // 
@@ -199,9 +294,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(4, 62);
+            this.label7.Location = new System.Drawing.Point(3, 40);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(190, 20);
+            this.label7.Size = new System.Drawing.Size(134, 13);
             this.label7.TabIndex = 1;
             this.label7.Text = "Company Bank Details";
             // 
@@ -210,9 +306,10 @@
             this.lblBankName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblBankName.AutoSize = true;
             this.lblBankName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBankName.Location = new System.Drawing.Point(4, 114);
+            this.lblBankName.Location = new System.Drawing.Point(3, 72);
+            this.lblBankName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBankName.Name = "lblBankName";
-            this.lblBankName.Size = new System.Drawing.Size(90, 17);
+            this.lblBankName.Size = new System.Drawing.Size(70, 13);
             this.lblBankName.TabIndex = 2;
             this.lblBankName.Text = "Bank Name";
             // 
@@ -221,9 +318,10 @@
             this.lblAccountDetail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblAccountDetail.AutoSize = true;
             this.lblAccountDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccountDetail.Location = new System.Drawing.Point(4, 154);
+            this.lblAccountDetail.Location = new System.Drawing.Point(3, 98);
+            this.lblAccountDetail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAccountDetail.Name = "lblAccountDetail";
-            this.lblAccountDetail.Size = new System.Drawing.Size(195, 20);
+            this.lblAccountDetail.Size = new System.Drawing.Size(138, 13);
             this.lblAccountDetail.TabIndex = 3;
             this.lblAccountDetail.Text = "Account No IFSC Code";
             // 
@@ -232,9 +330,10 @@
             this.lblCertify.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblCertify.AutoSize = true;
             this.lblCertify.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCertify.Location = new System.Drawing.Point(4, 187);
+            this.lblCertify.Location = new System.Drawing.Point(3, 119);
+            this.lblCertify.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCertify.Name = "lblCertify";
-            this.lblCertify.Size = new System.Drawing.Size(48, 17);
+            this.lblCertify.Size = new System.Drawing.Size(36, 13);
             this.lblCertify.TabIndex = 4;
             this.lblCertify.Text = "Certify";
             // 
@@ -242,9 +341,10 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(455, 21);
+            this.label11.Location = new System.Drawing.Point(302, 13);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 20);
+            this.label11.Size = new System.Drawing.Size(31, 13);
             this.label11.TabIndex = 5;
             this.label11.Text = "Total";
             // 
@@ -253,9 +353,10 @@
             this.lblCGST.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblCGST.AutoSize = true;
             this.lblCGST.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCGST.Location = new System.Drawing.Point(455, 73);
+            this.lblCGST.Location = new System.Drawing.Point(302, 46);
+            this.lblCGST.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCGST.Name = "lblCGST";
-            this.lblCGST.Size = new System.Drawing.Size(46, 17);
+            this.lblCGST.Size = new System.Drawing.Size(34, 13);
             this.lblCGST.TabIndex = 6;
             this.lblCGST.Text = "CGST";
             // 
@@ -264,9 +365,10 @@
             this.lblSGST.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblSGST.AutoSize = true;
             this.lblSGST.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSGST.Location = new System.Drawing.Point(455, 114);
+            this.lblSGST.Location = new System.Drawing.Point(302, 72);
+            this.lblSGST.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSGST.Name = "lblSGST";
-            this.lblSGST.Size = new System.Drawing.Size(46, 17);
+            this.lblSGST.Size = new System.Drawing.Size(34, 13);
             this.lblSGST.TabIndex = 7;
             this.lblSGST.Text = "SGST";
             // 
@@ -275,9 +377,10 @@
             this.lblIGST.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblIGST.AutoSize = true;
             this.lblIGST.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIGST.Location = new System.Drawing.Point(455, 155);
+            this.lblIGST.Location = new System.Drawing.Point(302, 98);
+            this.lblIGST.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIGST.Name = "lblIGST";
-            this.lblIGST.Size = new System.Drawing.Size(40, 17);
+            this.lblIGST.Size = new System.Drawing.Size(30, 13);
             this.lblIGST.TabIndex = 8;
             this.lblIGST.Text = "IGST";
             // 
@@ -286,9 +389,10 @@
             this.lblGrandTotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblGrandTotal.AutoSize = true;
             this.lblGrandTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrandTotal.Location = new System.Drawing.Point(455, 186);
+            this.lblGrandTotal.Location = new System.Drawing.Point(302, 119);
+            this.lblGrandTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGrandTotal.Name = "lblGrandTotal";
-            this.lblGrandTotal.Size = new System.Drawing.Size(68, 20);
+            this.lblGrandTotal.Size = new System.Drawing.Size(49, 13);
             this.lblGrandTotal.TabIndex = 9;
             this.lblGrandTotal.Text = "G.Total";
             // 
@@ -296,9 +400,10 @@
             // 
             this.lblBeforeTaxAmt.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblBeforeTaxAmt.AutoSize = true;
-            this.lblBeforeTaxAmt.Location = new System.Drawing.Point(653, 21);
+            this.lblBeforeTaxAmt.Location = new System.Drawing.Point(434, 13);
+            this.lblBeforeTaxAmt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBeforeTaxAmt.Name = "lblBeforeTaxAmt";
-            this.lblBeforeTaxAmt.Size = new System.Drawing.Size(14, 20);
+            this.lblBeforeTaxAmt.Size = new System.Drawing.Size(10, 13);
             this.lblBeforeTaxAmt.TabIndex = 10;
             this.lblBeforeTaxAmt.Text = "-";
             // 
@@ -306,9 +411,10 @@
             // 
             this.lblCGSTAmt.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCGSTAmt.AutoSize = true;
-            this.lblCGSTAmt.Location = new System.Drawing.Point(653, 72);
+            this.lblCGSTAmt.Location = new System.Drawing.Point(434, 46);
+            this.lblCGSTAmt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCGSTAmt.Name = "lblCGSTAmt";
-            this.lblCGSTAmt.Size = new System.Drawing.Size(14, 20);
+            this.lblCGSTAmt.Size = new System.Drawing.Size(10, 13);
             this.lblCGSTAmt.TabIndex = 11;
             this.lblCGSTAmt.Text = "-";
             // 
@@ -316,9 +422,10 @@
             // 
             this.lblSGSTAmt.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblSGSTAmt.AutoSize = true;
-            this.lblSGSTAmt.Location = new System.Drawing.Point(653, 113);
+            this.lblSGSTAmt.Location = new System.Drawing.Point(434, 72);
+            this.lblSGSTAmt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSGSTAmt.Name = "lblSGSTAmt";
-            this.lblSGSTAmt.Size = new System.Drawing.Size(14, 20);
+            this.lblSGSTAmt.Size = new System.Drawing.Size(10, 13);
             this.lblSGSTAmt.TabIndex = 12;
             this.lblSGSTAmt.Text = "-";
             // 
@@ -326,9 +433,10 @@
             // 
             this.lblIGSTAmt.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblIGSTAmt.AutoSize = true;
-            this.lblIGSTAmt.Location = new System.Drawing.Point(653, 154);
+            this.lblIGSTAmt.Location = new System.Drawing.Point(434, 98);
+            this.lblIGSTAmt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIGSTAmt.Name = "lblIGSTAmt";
-            this.lblIGSTAmt.Size = new System.Drawing.Size(14, 20);
+            this.lblIGSTAmt.Size = new System.Drawing.Size(10, 13);
             this.lblIGSTAmt.TabIndex = 13;
             this.lblIGSTAmt.Text = "-";
             // 
@@ -336,9 +444,10 @@
             // 
             this.lblTotalAmt.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTotalAmt.AutoSize = true;
-            this.lblTotalAmt.Location = new System.Drawing.Point(653, 186);
+            this.lblTotalAmt.Location = new System.Drawing.Point(434, 119);
+            this.lblTotalAmt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalAmt.Name = "lblTotalAmt";
-            this.lblTotalAmt.Size = new System.Drawing.Size(14, 20);
+            this.lblTotalAmt.Size = new System.Drawing.Size(10, 13);
             this.lblTotalAmt.TabIndex = 14;
             this.lblTotalAmt.Text = "-";
             // 
@@ -358,21 +467,24 @@
             this.tplMaterialInfo.Controls.Add(this.lblHSN, 1, 1);
             this.tplMaterialInfo.Controls.Add(this.lblInvQty, 2, 1);
             this.tplMaterialInfo.Controls.Add(this.lblInvAmt, 3, 1);
-            this.tplMaterialInfo.Location = new System.Drawing.Point(3, 296);
+            this.tplMaterialInfo.Location = new System.Drawing.Point(2, 231);
+            this.tplMaterialInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tplMaterialInfo.Name = "tplMaterialInfo";
             this.tplMaterialInfo.RowCount = 2;
             this.tplMaterialInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.47418F));
             this.tplMaterialInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.52582F));
-            this.tplMaterialInfo.Size = new System.Drawing.Size(671, 231);
+            this.tplMaterialInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tplMaterialInfo.Size = new System.Drawing.Size(447, 112);
             this.tplMaterialInfo.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(120, 17);
+            this.label2.Location = new System.Drawing.Point(80, 7);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 20);
+            this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Item Description";
             // 
@@ -380,9 +492,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(386, 17);
+            this.label3.Location = new System.Drawing.Point(256, 7);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 20);
+            this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "HSN";
             // 
@@ -390,9 +503,10 @@
             // 
             this.lblInvUOM.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblInvUOM.AutoSize = true;
-            this.lblInvUOM.Location = new System.Drawing.Point(467, 17);
+            this.lblInvUOM.Location = new System.Drawing.Point(310, 7);
+            this.lblInvUOM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInvUOM.Name = "lblInvUOM";
-            this.lblInvUOM.Size = new System.Drawing.Size(69, 20);
+            this.lblInvUOM.Size = new System.Drawing.Size(48, 13);
             this.lblInvUOM.TabIndex = 2;
             this.lblInvUOM.Text = "Qty (MT)";
             // 
@@ -400,18 +514,20 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(558, 7);
+            this.label6.Location = new System.Drawing.Point(372, 1);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 40);
+            this.label6.Size = new System.Drawing.Size(71, 25);
             this.label6.TabIndex = 4;
             this.label6.Text = "Before Tax Amount (INR)";
             // 
             // lblItemDesc
             // 
             this.lblItemDesc.AutoSize = true;
-            this.lblItemDesc.Location = new System.Drawing.Point(4, 55);
+            this.lblItemDesc.Location = new System.Drawing.Point(3, 27);
+            this.lblItemDesc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemDesc.Name = "lblItemDesc";
-            this.lblItemDesc.Size = new System.Drawing.Size(41, 20);
+            this.lblItemDesc.Size = new System.Drawing.Size(27, 13);
             this.lblItemDesc.TabIndex = 5;
             this.lblItemDesc.Text = "Item";
             // 
@@ -419,9 +535,10 @@
             // 
             this.lblHSN.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblHSN.AutoSize = true;
-            this.lblHSN.Location = new System.Drawing.Point(386, 55);
+            this.lblHSN.Location = new System.Drawing.Point(256, 27);
+            this.lblHSN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHSN.Name = "lblHSN";
-            this.lblHSN.Size = new System.Drawing.Size(43, 20);
+            this.lblHSN.Size = new System.Drawing.Size(30, 13);
             this.lblHSN.TabIndex = 6;
             this.lblHSN.Text = "HSN";
             // 
@@ -429,18 +546,20 @@
             // 
             this.lblInvQty.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblInvQty.AutoSize = true;
-            this.lblInvQty.Location = new System.Drawing.Point(481, 55);
+            this.lblInvQty.Location = new System.Drawing.Point(320, 27);
+            this.lblInvQty.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInvQty.Name = "lblInvQty";
-            this.lblInvQty.Size = new System.Drawing.Size(41, 20);
+            this.lblInvQty.Size = new System.Drawing.Size(29, 13);
             this.lblInvQty.TabIndex = 7;
             this.lblInvQty.Text = "QTY";
             // 
             // lblInvAmt
             // 
             this.lblInvAmt.AutoSize = true;
-            this.lblInvAmt.Location = new System.Drawing.Point(556, 55);
+            this.lblInvAmt.Location = new System.Drawing.Point(371, 27);
+            this.lblInvAmt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInvAmt.Name = "lblInvAmt";
-            this.lblInvAmt.Size = new System.Drawing.Size(65, 20);
+            this.lblInvAmt.Size = new System.Drawing.Size(43, 13);
             this.lblInvAmt.TabIndex = 9;
             this.lblInvAmt.Text = "Amount";
             // 
@@ -448,17 +567,20 @@
             // 
             this.tplBuyerInfo.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tplBuyerInfo.ColumnCount = 2;
-            this.tplBuyerInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.16418F));
-            this.tplBuyerInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.83582F));
-            this.tplBuyerInfo.Controls.Add(this.lblSellerName, 0, 0);
-            this.tplBuyerInfo.Controls.Add(this.lblSellerAdd1, 0, 1);
-            this.tplBuyerInfo.Controls.Add(this.lblSellerAdd2, 0, 2);
-            this.tplBuyerInfo.Controls.Add(this.lblSellerAdd3, 0, 3);
-            this.tplBuyerInfo.Controls.Add(this.lblBuyer, 1, 0);
-            this.tplBuyerInfo.Controls.Add(this.lblBuyerAdd1, 1, 2);
-            this.tplBuyerInfo.Controls.Add(this.lblBuyerGSTIN, 1, 4);
-            this.tplBuyerInfo.Controls.Add(this.lblSellerGSTNo, 0, 4);
-            this.tplBuyerInfo.Location = new System.Drawing.Point(3, 142);
+            this.tplBuyerInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tplBuyerInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tplBuyerInfo.Controls.Add(this.lblBuyerGSTIN, 0, 4);
+            this.tplBuyerInfo.Controls.Add(this.lblBuyerName, 0, 0);
+            this.tplBuyerInfo.Controls.Add(this.lblBuyerAdd1, 0, 1);
+            this.tplBuyerInfo.Controls.Add(this.lblBuyerAdd2, 0, 2);
+            this.tplBuyerInfo.Controls.Add(this.lblBuyerAdd3, 0, 3);
+            this.tplBuyerInfo.Controls.Add(this.lblShiptoName, 1, 0);
+            this.tplBuyerInfo.Controls.Add(this.lblShiptoAdd1, 1, 1);
+            this.tplBuyerInfo.Controls.Add(this.lblShiptoAdd2, 1, 2);
+            this.tplBuyerInfo.Controls.Add(this.lblShiptoAdd3, 1, 3);
+            this.tplBuyerInfo.Controls.Add(this.lblShiptoGSTIN, 1, 4);
+            this.tplBuyerInfo.Location = new System.Drawing.Point(2, 133);
+            this.tplBuyerInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tplBuyerInfo.Name = "tplBuyerInfo";
             this.tplBuyerInfo.RowCount = 5;
             this.tplBuyerInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -466,209 +588,66 @@
             this.tplBuyerInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tplBuyerInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tplBuyerInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tplBuyerInfo.Size = new System.Drawing.Size(671, 148);
+            this.tplBuyerInfo.Size = new System.Drawing.Size(447, 96);
             this.tplBuyerInfo.TabIndex = 1;
-            // 
-            // lblSellerName
-            // 
-            this.lblSellerName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblSellerName.AutoSize = true;
-            this.lblSellerName.Location = new System.Drawing.Point(4, 5);
-            this.lblSellerName.Name = "lblSellerName";
-            this.lblSellerName.Size = new System.Drawing.Size(91, 20);
-            this.lblSellerName.TabIndex = 0;
-            this.lblSellerName.Text = "SellerName";
-            // 
-            // lblSellerAdd1
-            // 
-            this.lblSellerAdd1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblSellerAdd1.AutoSize = true;
-            this.lblSellerAdd1.Location = new System.Drawing.Point(4, 34);
-            this.lblSellerAdd1.Name = "lblSellerAdd1";
-            this.lblSellerAdd1.Size = new System.Drawing.Size(47, 20);
-            this.lblSellerAdd1.TabIndex = 1;
-            this.lblSellerAdd1.Text = "Add1";
-            // 
-            // lblSellerAdd2
-            // 
-            this.lblSellerAdd2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblSellerAdd2.AutoSize = true;
-            this.lblSellerAdd2.Location = new System.Drawing.Point(4, 63);
-            this.lblSellerAdd2.Name = "lblSellerAdd2";
-            this.lblSellerAdd2.Size = new System.Drawing.Size(47, 20);
-            this.lblSellerAdd2.TabIndex = 2;
-            this.lblSellerAdd2.Text = "Add2";
-            // 
-            // lblSellerAdd3
-            // 
-            this.lblSellerAdd3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblSellerAdd3.AutoSize = true;
-            this.lblSellerAdd3.Location = new System.Drawing.Point(4, 92);
-            this.lblSellerAdd3.Name = "lblSellerAdd3";
-            this.lblSellerAdd3.Size = new System.Drawing.Size(47, 20);
-            this.lblSellerAdd3.TabIndex = 3;
-            this.lblSellerAdd3.Text = "Add3";
-            // 
-            // lblBuyer
-            // 
-            this.lblBuyer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblBuyer.AutoSize = true;
-            this.lblBuyer.Location = new System.Drawing.Point(320, 19);
-            this.lblBuyer.Name = "lblBuyer";
-            this.tplBuyerInfo.SetRowSpan(this.lblBuyer, 2);
-            this.lblBuyer.Size = new System.Drawing.Size(50, 20);
-            this.lblBuyer.TabIndex = 8;
-            this.lblBuyer.Text = "Buyer";
-            // 
-            // lblBuyerAdd1
-            // 
-            this.lblBuyerAdd1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblBuyerAdd1.AutoSize = true;
-            this.lblBuyerAdd1.Location = new System.Drawing.Point(320, 77);
-            this.lblBuyerAdd1.Name = "lblBuyerAdd1";
-            this.tplBuyerInfo.SetRowSpan(this.lblBuyerAdd1, 2);
-            this.lblBuyerAdd1.Size = new System.Drawing.Size(47, 20);
-            this.lblBuyerAdd1.TabIndex = 5;
-            this.lblBuyerAdd1.Text = "Add1";
             // 
             // lblBuyerGSTIN
             // 
             this.lblBuyerGSTIN.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblBuyerGSTIN.AutoSize = true;
-            this.lblBuyerGSTIN.Location = new System.Drawing.Point(320, 122);
+            this.lblBuyerGSTIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuyerGSTIN.Location = new System.Drawing.Point(3, 77);
+            this.lblBuyerGSTIN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBuyerGSTIN.Name = "lblBuyerGSTIN";
-            this.lblBuyerGSTIN.Size = new System.Drawing.Size(58, 20);
-            this.lblBuyerGSTIN.TabIndex = 7;
-            this.lblBuyerGSTIN.Text = "GSTIN";
+            this.lblBuyerGSTIN.Size = new System.Drawing.Size(41, 17);
+            this.lblBuyerGSTIN.TabIndex = 10;
+            this.lblBuyerGSTIN.Text = "GSTIN:";
+            this.lblBuyerGSTIN.UseCompatibleTextRendering = true;
             // 
-            // lblSellerGSTNo
+            // lblBuyerName
             // 
-            this.lblSellerGSTNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblSellerGSTNo.AutoSize = true;
-            this.lblSellerGSTNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSellerGSTNo.Location = new System.Drawing.Point(4, 120);
-            this.lblSellerGSTNo.Name = "lblSellerGSTNo";
-            this.lblSellerGSTNo.Size = new System.Drawing.Size(61, 24);
-            this.lblSellerGSTNo.TabIndex = 9;
-            this.lblSellerGSTNo.Text = "GSTIN:";
-            this.lblSellerGSTNo.UseCompatibleTextRendering = true;
+            this.lblBuyerName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblBuyerName.AutoSize = true;
+            this.lblBuyerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuyerName.Location = new System.Drawing.Point(3, 3);
+            this.lblBuyerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBuyerName.Name = "lblBuyerName";
+            this.lblBuyerName.Size = new System.Drawing.Size(71, 13);
+            this.lblBuyerName.TabIndex = 1;
+            this.lblBuyerName.Text = "BuyerName";
             // 
-            // tpInvoiceInfo
+            // lblBuyerAdd1
             // 
-            this.tpInvoiceInfo.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tpInvoiceInfo.ColumnCount = 4;
-            this.tpInvoiceInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.50835F));
-            this.tpInvoiceInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.85075F));
-            this.tpInvoiceInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.22388F));
-            this.tpInvoiceInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.27162F));
-            this.tpInvoiceInfo.Controls.Add(this.lblInvoiceHeader, 1, 0);
-            this.tpInvoiceInfo.Controls.Add(this.lblInvoiceNo, 2, 0);
-            this.tpInvoiceInfo.Controls.Add(this.lblInvoiceNoValue, 3, 0);
-            this.tpInvoiceInfo.Controls.Add(this.lblInvDate, 2, 1);
-            this.tpInvoiceInfo.Controls.Add(this.lblInvTime, 2, 2);
-            this.tpInvoiceInfo.Controls.Add(this.lblInvDateVal, 3, 1);
-            this.tpInvoiceInfo.Controls.Add(this.lblTruckNo, 3, 2);
-            this.tpInvoiceInfo.Controls.Add(this.picLogo, 0, 0);
-            this.tpInvoiceInfo.Controls.Add(this.lblRavannaNo, 1, 1);
-            this.tpInvoiceInfo.Location = new System.Drawing.Point(3, 3);
-            this.tpInvoiceInfo.Name = "tpInvoiceInfo";
-            this.tpInvoiceInfo.RowCount = 3;
-            this.tpInvoiceInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tpInvoiceInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tpInvoiceInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tpInvoiceInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tpInvoiceInfo.Size = new System.Drawing.Size(671, 130);
-            this.tpInvoiceInfo.TabIndex = 0;
+            this.lblBuyerAdd1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblBuyerAdd1.AutoSize = true;
+            this.lblBuyerAdd1.Location = new System.Drawing.Point(3, 22);
+            this.lblBuyerAdd1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBuyerAdd1.Name = "lblBuyerAdd1";
+            this.lblBuyerAdd1.Size = new System.Drawing.Size(32, 13);
+            this.lblBuyerAdd1.TabIndex = 2;
+            this.lblBuyerAdd1.Text = "Add1";
             // 
-            // lblInvoiceHeader
+            // lblBuyerAdd2
             // 
-            this.lblInvoiceHeader.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblInvoiceHeader.AutoSize = true;
-            this.lblInvoiceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvoiceHeader.Location = new System.Drawing.Point(264, 7);
-            this.lblInvoiceHeader.Name = "lblInvoiceHeader";
-            this.lblInvoiceHeader.Size = new System.Drawing.Size(146, 29);
-            this.lblInvoiceHeader.TabIndex = 1;
-            this.lblInvoiceHeader.Text = "Tax Invoice";
+            this.lblBuyerAdd2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblBuyerAdd2.AutoSize = true;
+            this.lblBuyerAdd2.Location = new System.Drawing.Point(3, 41);
+            this.lblBuyerAdd2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBuyerAdd2.Name = "lblBuyerAdd2";
+            this.lblBuyerAdd2.Size = new System.Drawing.Size(32, 13);
+            this.lblBuyerAdd2.TabIndex = 3;
+            this.lblBuyerAdd2.Text = "Add2";
             // 
-            // lblInvoiceNo
+            // lblBuyerAdd3
             // 
-            this.lblInvoiceNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblInvoiceNo.AutoSize = true;
-            this.lblInvoiceNo.Location = new System.Drawing.Point(441, 12);
-            this.lblInvoiceNo.Name = "lblInvoiceNo";
-            this.lblInvoiceNo.Size = new System.Drawing.Size(87, 20);
-            this.lblInvoiceNo.TabIndex = 3;
-            this.lblInvoiceNo.Text = "InvoiceNo :";
-            // 
-            // lblInvoiceNoValue
-            // 
-            this.lblInvoiceNoValue.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblInvoiceNoValue.AutoSize = true;
-            this.lblInvoiceNoValue.Location = new System.Drawing.Point(593, 12);
-            this.lblInvoiceNoValue.Name = "lblInvoiceNoValue";
-            this.lblInvoiceNoValue.Size = new System.Drawing.Size(23, 20);
-            this.lblInvoiceNoValue.TabIndex = 4;
-            this.lblInvoiceNoValue.Text = "-1";
-            // 
-            // lblInvDate
-            // 
-            this.lblInvDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblInvDate.AutoSize = true;
-            this.lblInvDate.Location = new System.Drawing.Point(441, 45);
-            this.lblInvDate.Name = "lblInvDate";
-            this.lblInvDate.Size = new System.Drawing.Size(76, 40);
-            this.lblInvDate.TabIndex = 5;
-            this.lblInvDate.Text = "Dispatch Time:";
-            // 
-            // lblInvTime
-            // 
-            this.lblInvTime.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblInvTime.AutoSize = true;
-            this.lblInvTime.Location = new System.Drawing.Point(441, 98);
-            this.lblInvTime.Name = "lblInvTime";
-            this.lblInvTime.Size = new System.Drawing.Size(89, 20);
-            this.lblInvTime.TabIndex = 6;
-            this.lblInvTime.Text = "Vechile No:";
-            // 
-            // lblInvDateVal
-            // 
-            this.lblInvDateVal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblInvDateVal.AutoSize = true;
-            this.lblInvDateVal.Location = new System.Drawing.Point(598, 55);
-            this.lblInvDateVal.Name = "lblInvDateVal";
-            this.lblInvDateVal.Size = new System.Drawing.Size(14, 20);
-            this.lblInvDateVal.TabIndex = 7;
-            this.lblInvDateVal.Text = "-";
-            // 
-            // lblTruckNo
-            // 
-            this.lblTruckNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTruckNo.AutoSize = true;
-            this.lblTruckNo.Location = new System.Drawing.Point(598, 98);
-            this.lblTruckNo.Name = "lblTruckNo";
-            this.lblTruckNo.Size = new System.Drawing.Size(14, 20);
-            this.lblTruckNo.TabIndex = 8;
-            this.lblTruckNo.Text = "-";
-            // 
-            // picLogo
-            // 
-            this.picLogo.Location = new System.Drawing.Point(4, 4);
-            this.picLogo.Name = "picLogo";
-            this.tpInvoiceInfo.SetRowSpan(this.picLogo, 3);
-            this.picLogo.Size = new System.Drawing.Size(220, 119);
-            this.picLogo.TabIndex = 11;
-            this.picLogo.TabStop = false;
-            // 
-            // lblRavannaNo
-            // 
-            this.lblRavannaNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblRavannaNo.AutoSize = true;
-            this.lblRavannaNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRavannaNo.Location = new System.Drawing.Point(241, 56);
-            this.lblRavannaNo.Name = "lblRavannaNo";
-            this.lblRavannaNo.Size = new System.Drawing.Size(0, 17);
-            this.lblRavannaNo.TabIndex = 12;
+            this.lblBuyerAdd3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblBuyerAdd3.AutoSize = true;
+            this.lblBuyerAdd3.Location = new System.Drawing.Point(3, 60);
+            this.lblBuyerAdd3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBuyerAdd3.Name = "lblBuyerAdd3";
+            this.lblBuyerAdd3.Size = new System.Drawing.Size(32, 13);
+            this.lblBuyerAdd3.TabIndex = 4;
+            this.lblBuyerAdd3.Text = "Add3";
             // 
             // printInvoiceDoc
             // 
@@ -689,25 +668,138 @@
             // 
             // btnPrintInv
             // 
-            this.btnPrintInv.Location = new System.Drawing.Point(12, 878);
+            this.btnPrintInv.Location = new System.Drawing.Point(8, 571);
+            this.btnPrintInv.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrintInv.Name = "btnPrintInv";
-            this.btnPrintInv.Size = new System.Drawing.Size(140, 30);
+            this.btnPrintInv.Size = new System.Drawing.Size(93, 19);
             this.btnPrintInv.TabIndex = 1;
             this.btnPrintInv.Text = "&Print";
             this.btnPrintInv.UseVisualStyleBackColor = true;
             this.btnPrintInv.Click += new System.EventHandler(this.BtnPrintInv_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(3, 6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(444, 23);
+            this.panel1.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(170, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tax Invoice";
+            // 
+            // lblInvoiceNoValue
+            // 
+            this.lblInvoiceNoValue.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblInvoiceNoValue.AutoSize = true;
+            this.lblInvoiceNoValue.Location = new System.Drawing.Point(226, 3);
+            this.lblInvoiceNoValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInvoiceNoValue.Name = "lblInvoiceNoValue";
+            this.lblInvoiceNoValue.Size = new System.Drawing.Size(59, 13);
+            this.lblInvoiceNoValue.TabIndex = 10;
+            this.lblInvoiceNoValue.Text = "Invoice No";
+            // 
+            // lblInvDateVal
+            // 
+            this.lblInvDateVal.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblInvDateVal.AutoSize = true;
+            this.lblInvDateVal.Location = new System.Drawing.Point(226, 41);
+            this.lblInvDateVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInvDateVal.Name = "lblInvDateVal";
+            this.lblInvDateVal.Size = new System.Drawing.Size(75, 13);
+            this.lblInvDateVal.TabIndex = 11;
+            this.lblInvDateVal.Text = "Dispatch Date";
+            // 
+            // lblTruckNo
+            // 
+            this.lblTruckNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTruckNo.AutoSize = true;
+            this.lblTruckNo.Location = new System.Drawing.Point(226, 80);
+            this.lblTruckNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTruckNo.Name = "lblTruckNo";
+            this.lblTruckNo.Size = new System.Drawing.Size(59, 13);
+            this.lblTruckNo.TabIndex = 12;
+            this.lblTruckNo.Text = "Vechile No";
+            // 
+            // lblShiptoName
+            // 
+            this.lblShiptoName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblShiptoName.AutoSize = true;
+            this.lblShiptoName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShiptoName.Location = new System.Drawing.Point(226, 3);
+            this.lblShiptoName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblShiptoName.Name = "lblShiptoName";
+            this.lblShiptoName.Size = new System.Drawing.Size(71, 13);
+            this.lblShiptoName.TabIndex = 11;
+            this.lblShiptoName.Text = "BuyerName";
+            // 
+            // lblShiptoAdd1
+            // 
+            this.lblShiptoAdd1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblShiptoAdd1.AutoSize = true;
+            this.lblShiptoAdd1.Location = new System.Drawing.Point(226, 22);
+            this.lblShiptoAdd1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblShiptoAdd1.Name = "lblShiptoAdd1";
+            this.lblShiptoAdd1.Size = new System.Drawing.Size(32, 13);
+            this.lblShiptoAdd1.TabIndex = 12;
+            this.lblShiptoAdd1.Text = "Add1";
+            // 
+            // lblShiptoAdd2
+            // 
+            this.lblShiptoAdd2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblShiptoAdd2.AutoSize = true;
+            this.lblShiptoAdd2.Location = new System.Drawing.Point(226, 41);
+            this.lblShiptoAdd2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblShiptoAdd2.Name = "lblShiptoAdd2";
+            this.lblShiptoAdd2.Size = new System.Drawing.Size(32, 13);
+            this.lblShiptoAdd2.TabIndex = 13;
+            this.lblShiptoAdd2.Text = "Add2";
+            // 
+            // lblShiptoAdd3
+            // 
+            this.lblShiptoAdd3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblShiptoAdd3.AutoSize = true;
+            this.lblShiptoAdd3.Location = new System.Drawing.Point(226, 60);
+            this.lblShiptoAdd3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblShiptoAdd3.Name = "lblShiptoAdd3";
+            this.lblShiptoAdd3.Size = new System.Drawing.Size(32, 13);
+            this.lblShiptoAdd3.TabIndex = 14;
+            this.lblShiptoAdd3.Text = "Add3";
+            // 
+            // lblShiptoGSTIN
+            // 
+            this.lblShiptoGSTIN.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblShiptoGSTIN.AutoSize = true;
+            this.lblShiptoGSTIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShiptoGSTIN.Location = new System.Drawing.Point(226, 77);
+            this.lblShiptoGSTIN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblShiptoGSTIN.Name = "lblShiptoGSTIN";
+            this.lblShiptoGSTIN.Size = new System.Drawing.Size(41, 17);
+            this.lblShiptoGSTIN.TabIndex = 15;
+            this.lblShiptoGSTIN.Text = "GSTIN:";
+            this.lblShiptoGSTIN.UseCompatibleTextRendering = true;
+            // 
             // frmInvoice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 920);
+            this.ClientSize = new System.Drawing.Size(469, 487);
             this.Controls.Add(this.btnPrintInv);
             this.Controls.Add(this.pnlInvoice);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInvoice";
             this.Text = "frmInvoice";
             this.Load += new System.EventHandler(this.FrmInvoice_Load);
             this.pnlInvoice.ResumeLayout(false);
+            this.tpInvoiceInfo.ResumeLayout(false);
+            this.tpInvoiceInfo.PerformLayout();
             this.tplOtherInfo.ResumeLayout(false);
             this.tplOtherInfo.PerformLayout();
             this.tplTaxInfo.ResumeLayout(false);
@@ -716,9 +808,8 @@
             this.tplMaterialInfo.PerformLayout();
             this.tplBuyerInfo.ResumeLayout(false);
             this.tplBuyerInfo.PerformLayout();
-            this.tpInvoiceInfo.ResumeLayout(false);
-            this.tpInvoiceInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -726,16 +817,7 @@
         #endregion
 
         public System.Windows.Forms.Panel pnlInvoice;
-        private System.Windows.Forms.TableLayoutPanel tpInvoiceInfo;
-        private System.Windows.Forms.Label lblInvoiceHeader;
-        private System.Windows.Forms.Label lblInvoiceNo;
-        private System.Windows.Forms.Label lblInvoiceNoValue;
-        private System.Windows.Forms.Label lblInvDate;
-        private System.Windows.Forms.Label lblInvTime;
-        private System.Windows.Forms.Label lblInvDateVal;
-        private System.Windows.Forms.Label lblTruckNo;
         private System.Windows.Forms.Label lblSellerGSTNo;
-        private System.Windows.Forms.PictureBox picLogo;
         private System.Drawing.Printing.PrintDocument printInvoiceDoc;
         private System.Windows.Forms.PrintPreviewDialog printInvoicePreview;
         private System.Windows.Forms.Button btnPrintInv;
@@ -744,8 +826,6 @@
         private System.Windows.Forms.Label lblSellerAdd1;
         private System.Windows.Forms.Label lblSellerAdd2;
         private System.Windows.Forms.Label lblSellerAdd3;
-        private System.Windows.Forms.Label lblBuyerAdd1;
-        private System.Windows.Forms.Label lblBuyerGSTIN;
         private System.Windows.Forms.TableLayoutPanel tplMaterialInfo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -755,7 +835,6 @@
         private System.Windows.Forms.Label lblHSN;
         private System.Windows.Forms.Label lblInvQty;
         private System.Windows.Forms.Label lblInvAmt;
-        private System.Windows.Forms.Label lblRavannaNo;
         private System.Windows.Forms.TableLayoutPanel tplTaxInfo;
         private System.Windows.Forms.Label lblTotalAmtWord;
         private System.Windows.Forms.Label label7;
@@ -776,6 +855,21 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblSellerSign;
         private System.Windows.Forms.Label lblInstruction;
-        private System.Windows.Forms.Label lblBuyer;
+        private System.Windows.Forms.TableLayoutPanel tpInvoiceInfo;
+        private System.Windows.Forms.Label lblBuyerGSTIN;
+        private System.Windows.Forms.Label lblBuyerName;
+        private System.Windows.Forms.Label lblBuyerAdd1;
+        private System.Windows.Forms.Label lblBuyerAdd2;
+        private System.Windows.Forms.Label lblBuyerAdd3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblInvoiceNoValue;
+        private System.Windows.Forms.Label lblInvDateVal;
+        private System.Windows.Forms.Label lblTruckNo;
+        private System.Windows.Forms.Label lblShiptoName;
+        private System.Windows.Forms.Label lblShiptoAdd1;
+        private System.Windows.Forms.Label lblShiptoAdd2;
+        private System.Windows.Forms.Label lblShiptoAdd3;
+        private System.Windows.Forms.Label lblShiptoGSTIN;
     }
 }

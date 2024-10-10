@@ -226,7 +226,7 @@ namespace EagleEye.Operations
                 ActualSaleRate = commonLib.fnCheckDecimal(txtRatePerTon.Text);
                 InvoiceQty = commonLib.fnCheckDecimal(txtInvoiceQty.Text);
                 InvoiceRate = commonLib.fnCheckDecimal(txtTaxInvoiceRate.Text);
-
+                TaxItemAmount = InvoiceQty * InvoiceRate;
 
 
                 //if (bInvoiceGenerated == true)
@@ -734,7 +734,7 @@ namespace EagleEye.Operations
             commonLib.PopulateBuyerCombo(cmbOtherBuyer, "N", "", "N");
             commonLib.PopulateSaleItemCombo(cmbItem, "N", "", "N");
             commonLib.PopulateParamMasterCombo(cmbTaxType, "N", " para_group = 'TAX_TYPE' ", "N");
-            txtInvoiceNo.Text = Global.gInvNoVirtual.ToString();
+            txtInvoiceNo.Text = Global.gInvNo.ToString();
             //txtPrintCopy.Text = "1";
             
             //chkTaxableInvoice.Checked = true;

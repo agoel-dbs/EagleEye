@@ -76,7 +76,7 @@ namespace EagleEye
                     string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName;
                     strFilePath = projectDirectory.Replace("\\", "/") + "/Images/Company_logo.png";
                 }
-                picLogo.Image = Image.FromFile(strFilePath);
+                //picLogo.Image = Image.FromFile(strFilePath);
             }
             catch (Exception ex)
             {
@@ -138,19 +138,19 @@ namespace EagleEye
                 {
                     if (row["inv_changed"].ToString() == "0")
                     {
-                        lblRavannaNo.Text = "Ravaana No:" + row["ravanna_no"].ToString();
+                        //lblRavannaNo.Text = "Ravaana No:" + row["ravanna_no"].ToString();
                     }
                     else
                     {
-                        lblRavannaNo.Text = "";
+                        //lblRavannaNo.Text = "";
                     }
                 }
 
                 strUOM = row["UOM"].ToString();
 
-                lblInvoiceNoValue.Text = row["invoice_no_visible"].ToString();
-                lblInvDateVal.Text = row["dispatch_date_time"].ToString();
-                lblTruckNo.Text = row["truck_no"].ToString();
+                lblInvoiceNoValue.Text = "Invoice No: " + row["invoice_no_visible"].ToString();
+                lblInvDateVal.Text = "Dispatch Time: " + row["dispatch_date_time"].ToString();
+                lblTruckNo.Text = "Vechile No: " + row["truck_no"].ToString();
 
                 //Seller Info
                 lblSellerName.Text = "Seller: M/s " + row["seller_name"].ToString();
@@ -162,15 +162,49 @@ namespace EagleEye
                 // buyer Info
                 if (PrintMessers == "Y")
                 {
-                    lblBuyer.Text = "Buyer: M/s " + row["buyer_name"].ToString();
+                    lblBuyerName.Text = "Buyer: M/s " + row["buyer_name"].ToString();
                 }
                 else
                 {
-                    lblBuyer.Text = "Buyer: " + row["buyer_name"].ToString();
+                    lblBuyerName.Text = "Buyer: " + row["buyer_name"].ToString();
                 }
 
-                lblBuyerAdd1.Text = "Address/Destination: " + row["buyer_add1"].ToString() + row["buyer_add2"].ToString(); 
-                lblBuyerGSTIN.Text = "GSTIN: " + row["buyer_GSTIN"].ToString();
+                //lblBuyerAdd1.Text = "Address/Destination: " + row["buyer_add1"].ToString() + row["buyer_add2"].ToString(); 
+                //lblBuyerGSTIN.Text = "GSTIN: " + row["buyer_GSTIN"].ToString();
+                    
+                lblBuyerAdd1.Text = "Addrees: " + row["buyer_add1"].ToString();
+                lblBuyerAdd2.Text = commonLib.fnCheckNull1(row["buyer_add2"].ToString());
+                lblBuyerAdd3.Text = commonLib.fnCheckNull1(row["buyer_add3"].ToString());
+                lblBuyerGSTIN.Text = "GSTIN:" + commonLib.fnCheckNull1(row["buyer_gstin"].ToString());
+
+                // Ship to 
+
+                if (commonLib.fnCheckNull(row["is_ship_to_buyer"].ToString()) == 1)
+                {
+                    lblShiptoName.Text = "Ship To: Same As Buyer";
+                    lblShiptoAdd1.Text = "Addrees: Same As Buyer";
+                    lblShiptoAdd2.Text = "";
+                    lblShiptoAdd3.Text = "";
+                    lblShiptoGSTIN.Text = "GSTIN:: Same As Buyer";
+                }   
+                else
+                {
+                    if (PrintMessers == "Y")
+                    {
+                        lblShiptoName.Text = "Ship To: M/s " + row["ship_to_name"].ToString();
+                    }
+                    else
+                    {
+                        lblShiptoName.Text = "Ship To: " + row["ship_to_name"].ToString();
+                    }
+
+
+                    lblShiptoAdd1.Text = "Addrees: " + row["ship_to_add1"].ToString();
+                    lblShiptoAdd2.Text = commonLib.fnCheckNull1(row["ship_to_add2"].ToString());
+                    lblShiptoAdd3.Text = commonLib.fnCheckNull1(row["ship_to_add3"].ToString());
+                    lblShiptoGSTIN.Text = "GSTIN:" + commonLib.fnCheckNull1(row["ship_to_gstin"].ToString());
+                }
+
 
                 ///Item
                 ///

@@ -41,7 +41,7 @@ namespace EagleEye.Operations
                 dtTransasactionDate.MaxDate = DateTime.Now;
                 dtTransasactionDate.Value = DateTime.Now.AddDays(-1);
                 lblLedgerHis.Text = "Ledger History - Past " + LedgerHistoryMonths  + " months";
-
+                rtxtRemarks.Text = "Payment";
             }
             catch (Exception ex)
             {

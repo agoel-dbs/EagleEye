@@ -41,8 +41,10 @@ namespace EagleEye.Finance
                 LedgerHistoryMonths = objParam.GetParameterValue();
 
                 commonLib.PopulateExpenseHeadCombo(cmbExpenseHead, "N", " exp_group = 'VENDOR_PAYMENT' ", "N");
+                cmbExpenseHead.Text = "Cash Flow";
                 commonLib.PopulateVendorCombo(cmbVendor, "N", "", "N");
                 commonLib.PopulateParamMasterCombo(cmbModeOfPayment, "N", " para_group = 'PAYMENT_MODE' ", "N");
+                cmbModeOfPayment.Text = "Cash";
                 dtTransasactionDate.MaxDate = DateTime.Now;
                 lblLedgerHis.Text = "Ledger History - Past " + LedgerHistoryMonths + " months";
 

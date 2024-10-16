@@ -42,6 +42,7 @@ namespace EagleEye.Operations
                 dtTransasactionDate.Value = DateTime.Now.AddDays(-1);
                 lblLedgerHis.Text = "Ledger History - Past " + LedgerHistoryMonths  + " months";
                 rtxtRemarks.Text = "Payment";
+                cmbModeOfPayment.Text = "Cash";
             }
             catch (Exception ex)
             {

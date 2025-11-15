@@ -742,7 +742,7 @@ namespace EagleEye.Operations
             TaxableInvoice = 1;
             InvoiceNo = Global.gInvNo;
             cmbTaxType.SelectedIndex = 1;
-            txtTaxInvoiceRate.Text = "600";
+            txtTaxInvoiceRate.Text = "700";
             InvoiceSource = "Bill";
 
             //Expense Details

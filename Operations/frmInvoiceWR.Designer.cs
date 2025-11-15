@@ -38,6 +38,7 @@
             this.btnGenerateInvoice = new System.Windows.Forms.Button();
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tbEdit = new System.Windows.Forms.TabPage();
+            this.txtGSTNo = new System.Windows.Forms.TextBox();
             this.dtBillDate = new System.Windows.Forms.DateTimePicker();
             this.lblEmailId = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -80,7 +81,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblFormHeader = new System.Windows.Forms.Label();
-            this.txtGSTNo = new System.Windows.Forms.TextBox();
             this.pnlMain.SuspendLayout();
             this.tabMain.SuspendLayout();
             this.tbEdit.SuspendLayout();
@@ -197,6 +197,14 @@
             this.tbEdit.TabIndex = 0;
             this.tbEdit.Text = "Bill Details";
             // 
+            // txtGSTNo
+            // 
+            this.txtGSTNo.Location = new System.Drawing.Point(26, 37);
+            this.txtGSTNo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtGSTNo.Name = "txtGSTNo";
+            this.txtGSTNo.Size = new System.Drawing.Size(169, 20);
+            this.txtGSTNo.TabIndex = 150;
+            // 
             // dtBillDate
             // 
             this.dtBillDate.Location = new System.Drawing.Point(500, 295);
@@ -285,7 +293,7 @@
             this.txtTaxInvoiceRate.Name = "txtTaxInvoiceRate";
             this.txtTaxInvoiceRate.Size = new System.Drawing.Size(172, 20);
             this.txtTaxInvoiceRate.TabIndex = 15;
-            this.txtTaxInvoiceRate.Text = "600";
+            this.txtTaxInvoiceRate.Text = "700";
             // 
             // cmbOtherBuyer
             // 
@@ -700,14 +708,6 @@
             this.lblFormHeader.TabIndex = 89;
             this.lblFormHeader.Text = "Header";
             this.lblFormHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtGSTNo
-            // 
-            this.txtGSTNo.Location = new System.Drawing.Point(26, 37);
-            this.txtGSTNo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtGSTNo.Name = "txtGSTNo";
-            this.txtGSTNo.Size = new System.Drawing.Size(169, 20);
-            this.txtGSTNo.TabIndex = 150;
             // 
             // frmInvoiceWR
             // 

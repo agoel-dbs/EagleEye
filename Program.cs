@@ -13,6 +13,12 @@ namespace EagleEye
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+        static  void onDebug()
+        {
+         
+        }
+
+        [STAThread]
         static void Main()
         {
 

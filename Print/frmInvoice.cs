@@ -154,7 +154,7 @@ namespace EagleEye
 
                 //Seller Info
                 lblSellerName.Text = "Seller: M/s " + row["seller_name"].ToString();
-                lblSellerAdd1.Text = "Addrees: " +  row["seller_add1"].ToString();
+                lblSellerAdd1.Text = "Address: " +  row["seller_add1"].ToString();
                 lblSellerAdd2.Text = row["seller_add2"].ToString(); 
                 lblSellerAdd3.Text = row["seller_add3"].ToString() ;
                 lblSellerGSTNo.Text = "GSTIN:" + row["seller_gstin"].ToString();
@@ -172,7 +172,7 @@ namespace EagleEye
                 //lblBuyerAdd1.Text = "Address/Destination: " + row["buyer_add1"].ToString() + row["buyer_add2"].ToString(); 
                 //lblBuyerGSTIN.Text = "GSTIN: " + row["buyer_GSTIN"].ToString();
                     
-                lblBuyerAdd1.Text = "Addrees: " + row["buyer_add1"].ToString();
+                lblBuyerAdd1.Text = "Address: " + row["buyer_add1"].ToString();
                 lblBuyerAdd2.Text = commonLib.fnCheckNull1(row["buyer_add2"].ToString());
                 lblBuyerAdd3.Text = commonLib.fnCheckNull1(row["buyer_add3"].ToString());
                 lblBuyerGSTIN.Text = "GSTIN:" + commonLib.fnCheckNull1(row["buyer_gstin"].ToString());
@@ -182,7 +182,7 @@ namespace EagleEye
                 if (commonLib.fnCheckNull(row["is_ship_to_buyer"].ToString()) == 1)
                 {
                     lblShiptoName.Text = "Ship To: Same As Buyer";
-                    lblShiptoAdd1.Text = "Addrees: Same As Buyer";
+                    lblShiptoAdd1.Text = "Address: Same As Buyer";
                     lblShiptoAdd2.Text = "";
                     lblShiptoAdd3.Text = "";
                     lblShiptoGSTIN.Text = "GSTIN:: Same As Buyer";
@@ -199,7 +199,7 @@ namespace EagleEye
                     }
 
 
-                    lblShiptoAdd1.Text = "Addrees: " + row["ship_to_add1"].ToString();
+                    lblShiptoAdd1.Text = "Address: " + row["ship_to_add1"].ToString();
                     lblShiptoAdd2.Text = commonLib.fnCheckNull1(row["ship_to_add2"].ToString());
                     lblShiptoAdd3.Text = commonLib.fnCheckNull1(row["ship_to_add3"].ToString());
                     lblShiptoGSTIN.Text = "GSTIN:" + commonLib.fnCheckNull1(row["ship_to_gstin"].ToString());
